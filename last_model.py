@@ -76,8 +76,8 @@ def run_all():
                             batch_size=16, validation_split=0.2, callbacks=[cp_callback])
     else:
         # Обучение модели с использованием обратного вызова ModelCheckpoint
-        autoencoder.fit(train_images_with_watermark, train_images_original, epochs=100, batch_size=16,
+        autoencoder.fit(train_images_with_watermark, train_images_original, epochs=1, batch_size=32,
                         validation_split=0.2, callbacks=[cp_callback])
 
     # Сохранение окончательной модели
-    autoencoder.save('autoencoder_model.h5')
+    autoencoder.save('autoencoder_model.keras')

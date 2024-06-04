@@ -31,7 +31,7 @@ def split_image(img, fragment_width=256, fragment_height=256, saving_folder='ima
 
                 # Сохраняем фрагмент
                 fragment.save(fragment_path)
-                save_to_dataset_with_watermark(fragment_filename, fragment, gen_rnd_text(), 100)
+                save_to_dataset_with_watermark(fragment_filename, fragment, gen_rnd_text(), 100, 'image_fragments_watermark')
                 print(f"Fragment saved: {fragment_path}")
 
                 fragment_number += 1

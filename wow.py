@@ -47,6 +47,6 @@ def embed_watermark_text(image_name, image, watermark_text, block_size, out_fold
 
 
 def save_to_dataset_with_watermark(image_name, image, watermark_text, block_size,
-                                   out_folder='image_fragments_watermark'):
+                                   out_folder):
     embed_watermark_text(image_name, image, watermark_text, block_size, out_folder).save(
         os.path.join(out_folder, image_name))
